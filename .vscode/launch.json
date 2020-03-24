@@ -2,6 +2,18 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - AnnotationApplication",
+            "request": "launch",
+            "mainClass": "com.yifan.springboot.AnnotationApplication"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - DemoApplication",
+            "request": "launch",
+            "mainClass": "com.yifan.springboot.DemoApplication"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-DemoApplication<springboot>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
