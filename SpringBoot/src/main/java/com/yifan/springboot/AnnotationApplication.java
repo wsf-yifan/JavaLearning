@@ -11,37 +11,37 @@ import com.yifan.springboot.service.UseHelloService;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-@SpringBootApplication
+// @SpringBootApplication
 public class AnnotationApplication{
  public static void main(String[] args) {
     System.out.println("Begin to start.");
 
 		// normal configuration
-		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(DiConfig.class);
+		// AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(DiConfig.class);
 
-		UseHelloService useHelloService = context.getBean(UseHelloService.class);
-		System.out.println(useHelloService.sayHello());
+		// UseHelloService useHelloService = context.getBean(UseHelloService.class);
+		// System.out.println(useHelloService.sayHello());
 
-		context.close();
+		// context.close();
 
-		// JAVA CONFIGURATION
-		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(JavaConfig.class);
-		UseFunctionService useFunctionService = ctx.getBean(UseFunctionService.class);
+		// // JAVA CONFIGURATION
+		// AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(JavaConfig.class);
+		// UseFunctionService useFunctionService = ctx.getBean(UseFunctionService.class);
 
-		System.out.println(useFunctionService.sayHi());
-		ctx.close();
+		// System.out.println(useFunctionService.sayHi());
+		// ctx.close();
 
-		System.out.println("AOP使用");
+		// System.out.println("AOP使用");
 
-		AnnotationConfigApplicationContext aop = new AnnotationConfigApplicationContext(AopConfig.class);
-		DemoAnnotationService demoAnnotationService = aop.getBean(DemoAnnotationService.class);
-		DemoMethodService demoMethodService = aop.getBean(DemoMethodService.class);
+		// AnnotationConfigApplicationContext aop = new AnnotationConfigApplicationContext(AopConfig.class);
+		// DemoAnnotationService demoAnnotationService = aop.getBean(DemoAnnotationService.class);
+		// DemoMethodService demoMethodService = aop.getBean(DemoMethodService.class);
 
-		//invoke methods
-		demoAnnotationService.add();
-		demoMethodService.add();
+		// //invoke methods
+		// demoAnnotationService.add();
+		// demoMethodService.add();
 
-		aop.close();
+		// aop.close();
 }
 
 }
