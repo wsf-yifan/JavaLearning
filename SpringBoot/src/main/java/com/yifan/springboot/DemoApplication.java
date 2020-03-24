@@ -1,5 +1,8 @@
 package com.yifan.springboot;
 
+import com.yifan.springboot.aop.AopConfig;
+import com.yifan.springboot.aop.DemoAnnotationService;
+import com.yifan.springboot.aop.DemoMethodService;
 import com.yifan.springboot.config.DiConfig;
 import com.yifan.springboot.config.JavaConfig;
 import com.yifan.springboot.service.UseFunctionService;
@@ -31,6 +34,18 @@ public class DemoApplication {
 
 		System.out.println(useFunctionService.sayHi());
 		ctx.close();
+
+		System.out.println("AOP使用");
+
+		AnnotationConfigApplicationContext aop = new AnnotationConfigApplicationContext(AopConfig.class);
+		DemoAnnotationService demoAnnotationService = aop.getBean(DemoAnnotationService.class);
+		DemoMethodService demoMethodService = aop.getBean(DemoMethodService.class);
+
+		//invoke methods
+		demoAnnotationService.add();
+		demoMethodService.add();
+
+		aop.close();
 	}
 
 }
