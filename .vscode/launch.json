@@ -9,6 +9,16 @@
             "mainClass": "com.yifan.springboot.DemoApplication",
             "projectName": "springboot",
             "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-AnnotationApplication<springboot>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.yifan.springboot.AnnotationApplication",
+            "projectName": "springboot",
+            "args": ""
         }
     ]
 }
